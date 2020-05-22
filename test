@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+long double ciag(long double n)
+{
+    if(n == 0)
+    {
+        return 0.5;
+    }
+    else if(n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return (ciag(n-2)-ciag(n-1))*ciag(n-2);
+    }
+}
+int main()
+{
+    cout << "Podaj do ktorego wyrazu wyswietlic: ";
+    long double koniec;
+    cin >> koniec;
+
+    for(long double i = 0; i <= koniec; i++)
+    {
+        cout << "Wyraz [" << i << "]: " << ciag(i) << endl;
+    }
+
+    return 0;
+}
