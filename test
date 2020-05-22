@@ -17,6 +17,7 @@ long double ciag(long double n)
         return (ciag(n-2)-ciag(n-1))*ciag(n-2);
     }
 }
+
 int main()
 {
     cout << "Podaj do ktorego wyrazu wyswietlic: ";
