@@ -2,7 +2,7 @@
 
 using namespace std;
 
-long double ciag(long double n)
+long double ciag(int n)
 {
     if(n == 0)
     {
@@ -21,10 +21,16 @@ long double ciag(long double n)
 int main()
 {
     cout << "Podaj do ktorego wyrazu wyswietlic: ";
-    long double koniec;
+    int koniec;
     cin >> koniec;
+    
+    while(koniec < 0)
+    {
+        cout << "Koniec ciagu nie może byc mniejszy od zera. Podaj go ponownie: ";
+        cin >> koniec;
+    }
 
-    for(long double i = 0; i <= koniec; i++)
+    for(int i = 0; i <= koniec; i++)
     {
         cout << "Wyraz [" << i << "]: " << ciag(i) << endl;
     }
